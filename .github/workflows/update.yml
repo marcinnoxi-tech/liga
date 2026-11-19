@@ -31,6 +31,9 @@ jobs:
 
       - name: Pobierz wyniki z squashweb.pl
         run: node scripts/fetch.mjs
+        
+      - name: Pobierz ranking Czwartkowego Grania z bo5.pl
+        run: node scripts/fetch-bo5.mjs
 
       - name: Zapisz nowe dane w repozytorium
         id: commit
