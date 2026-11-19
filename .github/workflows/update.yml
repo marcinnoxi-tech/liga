@@ -1,0 +1,58 @@
+name: Aktualizacja ligi
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'   # co 15 minut (GitHub może opóźniać uruchomienia o kilka-kilkanaście minut)
+  workflow_dispatch:          # przycisk "Run workflow" do ręcznego odświeżenia
+  push:
+    branches: [main]          # po każdej zmianie wyglądu strony
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: liga
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Pobierz wyniki z squashweb.pl
+        run: node scripts/fetch.mjs
+
+      - name: Zapisz nowe dane w repozytorium
+        id: commit
+        run: |
+          git config user.name "liga-bot"
+          git config user.email "liga-bot@users.noreply.github.com"
+          git add site/data
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Aktualizacja wyników $(TZ=Europe/Warsaw date '+%Y-%m-%d %H:%M')"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Przygotuj stronę
+        if: steps.commit.outputs.changed == 'true' || github.event_name != 'schedule'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Opublikuj na GitHub Pages
+        id: deploy
+        if: steps.commit.outputs.changed == 'true' || github.event_name != 'schedule'
+        uses: actions/deploy-pages@v4
