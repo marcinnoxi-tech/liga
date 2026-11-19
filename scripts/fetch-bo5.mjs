@@ -127,7 +127,7 @@ async function load() {
   const file = process.argv[2];
   if (file) return readFile(file, 'utf8');
   const res = await fetch(CONFIG.rankingUrl, {
-    headers: { 'User-Agent': 'Mozilla/5.0 (squash-liga; ranking co godzinę)', 'Accept-Language': 'pl' },
+    headers: { 'User-Agent': 'Mozilla/5.0 (compatible; squash-liga/1.0)', 'Accept-Language': 'pl' },
     signal: AbortSignal.timeout(25000),
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
