@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SquashPoint League – tabela ligi</title>
+<meta name="description" content="Tabele, mecze bezpośrednie i wyniki SquashPoint League.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <div class="top-row">
+      <div class="brand">
+        <div class="kicker">Sezon <span id="season">–</span> · <span id="monthLabel">–</span></div>
+        <h1>SquashPoint League</h1>
+      </div>
+      <div class="top-stats">
+        <div><b id="statPlayers">–</b><span>zawodników</span></div>
+        <div><b id="statMatches">–</b><span>meczów w miesiącu</span></div>
+        <div class="month-pick">
+          <label for="monthSelect">Miesiąc</label>
+          <select id="monthSelect"></select>
+        </div>
+      </div>
+    </div>
+    <nav class="tabs" id="tabs" aria-label="Grupy"></nav>
+  </div>
+</header>
+
+<main class="wrap main" id="main">
+  <p class="loading" id="loading">Wczytywanie danych…</p>
+</main>
+
+<footer class="wrap foot">
+  <span>Dane: <a href="http://squashweb.pl/sqliga/" rel="noopener">squashweb.pl/sqliga</a> · aktualizacja automatyczna co ok. 15 min</span>
+  <span id="updated"></span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
