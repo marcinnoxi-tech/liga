@@ -10,77 +10,107 @@
   {
    "name": "Runda 1",
    "date": "2026-09-03",
-   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+1,25018.html"
+   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+1,25018.html",
+   "id": "25018",
+   "details": true
   },
   {
    "name": "Runda 2",
    "date": "2026-09-10",
-   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+2,25019.html"
+   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+2,25019.html",
+   "id": "25019",
+   "details": true
   },
   {
    "name": "Runda 3",
    "date": "2026-09-17",
-   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+3,25020.html"
+   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+3,25020.html",
+   "id": "25020",
+   "details": true
   },
   {
    "name": "Runda 4",
    "date": "2026-09-24",
-   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+4,25021.html"
+   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+4,25021.html",
+   "id": "25021",
+   "details": true
   },
   {
    "name": "Runda 5",
    "date": "2026-10-01",
-   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+5,25022.html"
+   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+5,25022.html",
+   "id": "25022",
+   "details": true
   },
   {
    "name": "Runda 6",
    "date": "2026-10-08",
-   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+6,25023.html"
+   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+6,25023.html",
+   "id": "25023",
+   "details": true
   },
   {
    "name": "Runda 7",
    "date": "2026-10-15",
-   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+7,25024.html"
+   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+7,25024.html",
+   "id": "25024",
+   "details": true
   },
   {
    "name": "Runda 8",
    "date": "2026-10-22",
-   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+8,25025.html"
+   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+8,25025.html",
+   "id": "25025",
+   "details": true
   },
   {
    "name": "Runda 9",
    "date": "2026-10-29",
-   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+9,25026.html"
+   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+9,25026.html",
+   "id": "25026",
+   "details": true
   },
   {
    "name": "Runda 10",
    "date": "2026-11-05",
-   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+10,25027.html"
+   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+10,25027.html",
+   "id": "25027",
+   "details": true
   },
   {
    "name": "Runda 11",
    "date": "2026-11-12",
-   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+11,25028.html"
+   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+11,25028.html",
+   "id": "25028",
+   "details": true
   },
   {
    "name": "Runda 12",
    "date": "2026-11-19",
-   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+12,25029.html"
+   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+12,25029.html",
+   "id": "25029",
+   "details": false
   },
   {
    "name": "Runda 13",
    "date": "2026-11-26",
-   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+13,25030.html"
+   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+13,25030.html",
+   "id": "25030",
+   "details": false
   },
   {
    "name": "Runda 14",
    "date": "2026-12-03",
-   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+14,25031.html"
+   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+14,25031.html",
+   "id": "25031",
+   "details": false
   },
   {
    "name": "Runda 15",
    "date": "2026-12-10",
-   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+15,25032.html"
+   "url": "https://bo5.pl/factory/CZWARTKOWE+GRANIE-Runda+15,25032.html",
+   "id": "25032",
+   "details": false
   }
  ],
  "players": [
@@ -1045,5 +1075,5 @@
    "best": 8
   }
  ],
- "updated": "2026-11-19T08:41:11.018Z"
+ "updated": "2026-11-19T09:26:49.842Z"
 }
