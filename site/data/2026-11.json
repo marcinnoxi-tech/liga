@@ -1,6 +1,6 @@
 {
  "month": "2026-11",
- "updated": "2026-11-19T08:19:08.021Z",
+ "updated": "2026-11-19T17:32:17.554Z",
  "players": [
   {
    "id": 5093,
@@ -38,17 +38,17 @@
    "kontuzja": false
   },
   {
-   "id": 289,
-   "nazwisko": "Tórz",
-   "imie": "Marcin",
-   "grupa": 80,
-   "kontuzja": false
-  },
-  {
    "id": 186,
    "nazwisko": "Ormianin",
    "imie": "Marcin",
    "grupa": 90,
+   "kontuzja": false
+  },
+  {
+   "id": 509,
+   "nazwisko": "Górny",
+   "imie": "Kamil",
+   "grupa": 80,
    "kontuzja": false
   },
   {
@@ -73,9 +73,9 @@
    "kontuzja": false
   },
   {
-   "id": 509,
-   "nazwisko": "Górny",
-   "imie": "Kamil",
+   "id": 289,
+   "nazwisko": "Tórz",
+   "imie": "Marcin",
    "grupa": 80,
    "kontuzja": false
   },
@@ -392,7 +392,7 @@
    "nazwisko": "Skinderowicz",
    "imie": "Jakub",
    "grupa": 60,
-   "kontuzja": false
+   "kontuzja": true
   },
   {
    "id": 524,
@@ -420,7 +420,7 @@
    "nazwisko": "Skotnicki",
    "imie": "Oskar",
    "grupa": 60,
-   "kontuzja": false
+   "kontuzja": true
   }
  ],
  "matches": [
@@ -2485,6 +2485,30 @@
     11,
     11,
     11,
+    11
+   ]
+  },
+  {
+   "id": 10852,
+   "data": "2026-11-19",
+   "a": 297,
+   "b": 509,
+   "wa": 2,
+   "wb": 3,
+   "pa": 32,
+   "pb": 48,
+   "sa": [
+    11,
+    12,
+    4,
+    11,
+    6
+   ],
+   "sb": [
+    6,
+    14,
+    11,
+    4,
     11
    ]
   }
