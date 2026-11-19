@@ -123,15 +123,178 @@ function parseRanking(html) {
   return { columns: roundCols.map(({ c }) => c), players, season: seasonMatch ? seasonMatch[0] : null };
 }
 
-async function load() {
-  const file = process.argv[2];
-  if (file) return readFile(file, 'utf8');
-  const res = await fetch(CONFIG.rankingUrl, {
-    headers: { 'User-Agent': 'Mozilla/5.0 (compatible; squash-liga/1.0)', 'Accept-Language': 'pl' },
+// ===== Wyniki rund (grupy i mecze) =====
+// Fragment HTML ze strony rundy: https://bo5.pl/clubs/ajax/getTab.php?tab=league/results&league-round-id=ID
+// Struktura (wg skryptu league.v30.js z bo5.pl): każda grupa to <table class="roundGroup" gid="…">,
+// gracz to <tr playerid="…">, mecz to zagnieżdżona <table mid="…"> z dwoma wierszami <tr pid="…">,
+// w których komórki bez "rowspan" to punkty w kolejnych setach.
+const ROUNDS_DIR = path.join(process.cwd(), 'site', 'data', 'czwartki-rundy');
+const RESULTS_URL = (id) => `https://bo5.pl/clubs/ajax/getTab.php?tab=league/results&league-round-id=${id}`;
+const VOID = new Set(['br', 'img', 'input', 'hr', 'meta', 'link', 'col', 'area', 'base', 'embed', 'source', 'wbr', 'param', 'track']);
+
+// Mały, tolerancyjny parser HTML do drzewa elementów (wystarczający dla tabel bo5.pl)
+function parseDom(html) {
+  const root = { tag: '#root', attrs: {}, children: [], parent: null };
+  let cur = root;
+  const re = /<!--[\s\S]*?-->|<!\w[^>]*>|<(\/?)([a-zA-Z][\w:-]*)((?:[^>"']|"[^"]*"|'[^']*')*)>/g;
+  let last = 0, m;
+  const addText = (t) => { if (t) cur.children.push({ tag: '#text', text: t, parent: cur }); };
+  while ((m = re.exec(html))) {
+    addText(html.slice(last, m.index));
+    last = re.lastIndex;
+    if (!m[2]) continue; // komentarz / doctype
+    const tag = m[2].toLowerCase();
+    if (m[1]) { // znacznik zamykający
+      let n = cur;
+      while (n && n !== root && n.tag !== tag) n = n.parent;
+      if (n && n !== root) cur = n.parent;
+      continue;
+    }
+    // niejawne zamknięcia w tabelach
+    if (tag === 'td' || tag === 'th') {
+      let n = cur;
+      while (n && n !== root && !['td', 'th', 'tr', 'table'].includes(n.tag)) n = n.parent;
+      if (n && (n.tag === 'td' || n.tag === 'th')) cur = n.parent;
+    }
+    if (tag === 'tr') {
+      let n = cur;
+      while (n && n !== root && !['tr', 'table', 'tbody', 'thead', 'tfoot'].includes(n.tag)) n = n.parent;
+      if (n && n.tag === 'tr') cur = n.parent;
+    }
+    const attrs = {};
+    for (const a of m[3].matchAll(/([^\s=\/"']+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'>]+)))?/g)) {
+      attrs[a[1].toLowerCase()] = a[2] ?? a[3] ?? a[4] ?? '';
+    }
+    const el = { tag, attrs, children: [], parent: cur };
+    cur.children.push(el);
+    if (tag === 'script' || tag === 'style') { // treść surowa
+      const end = html.toLowerCase().indexOf(`</${tag}`, last);
+      last = end < 0 ? html.length : end;
+      re.lastIndex = last;
+      continue;
+    }
+    if (!VOID.has(tag) && !/\/\s*$/.test(m[3])) cur = el;
+  }
+  addText(html.slice(last));
+  return root;
+}
+
+const kids = (n) => n.children.filter((c) => c.tag !== '#text');
+function findAll(n, pred, out = [], stopAt = null) {
+  for (const c of n.children) {
+    if (c.tag === '#text') continue;
+    if (pred(c)) out.push(c);
+    if (!(stopAt && stopAt(c))) findAll(c, pred, out, stopAt);
+  }
+  return out;
+}
+const nodeText = (n) => (n.tag === '#text' ? n.text : n.children.map(nodeText).join(' '));
+const hasClass = (n, c) => (' ' + (n.attrs.class || '') + ' ').includes(' ' + c + ' ');
+
+function parseRoundResults(html) {
+  const dom = parseDom(html);
+  const groupTables = findAll(dom, (n) => n.tag === 'table' && (hasClass(n, 'roundGroup') || n.attrs.gid != null) && n.attrs.mid == null);
+  const groups = [];
+  groupTables.forEach((gt, gi) => {
+    // wiersze graczy tej grupy (bez wchodzenia w tabele meczów)
+    const rows = findAll(gt, (n) => n.tag === 'tr' && n.attrs.playerid != null, [], (n) => n.tag === 'table' && n.attrs.mid != null);
+    if (!rows.length) return;
+    const players = [];
+    const matches = new Map();
+    for (const tr of rows) {
+      const id = tr.attrs.playerid;
+      const cells = kids(tr).filter((c) => c.tag === 'td' || c.tag === 'th');
+      const first = cells[0];
+      const link = first ? findAll(first, (n) => n.tag === 'a')[0] : null;
+      const name = text(nodeText(link || first || { tag: '#text', text: '' })).replace(/^\d+\.\s*/, '');
+      const placeCell = findAll(tr, (n) => n.tag === 'td' && hasClass(n, 'place'), [], (n) => n.tag === 'table' && n.attrs.mid != null)[0];
+      const place = placeCell ? parseInt(text(nodeText(placeCell)), 10) : NaN;
+      players.push({ id, name, place: Number.isFinite(place) ? place : null });
+
+      for (const mt of findAll(tr, (n) => n.tag === 'table' && n.attrs.mid != null)) {
+        const mid = mt.attrs.mid;
+        if (matches.has(mid)) continue;
+        const prs = findAll(mt, (n) => n.tag === 'tr' && n.attrs.pid != null);
+        if (prs.length < 2) continue;
+        const sets = prs.slice(0, 2).map((r) => findAll(r, (n) => n.tag === 'td' && n.attrs.rowspan == null)
+          .map((td) => { const v = parseInt(text(nodeText(td)), 10); return Number.isFinite(v) ? v : null; }));
+        const len = Math.max(sets[0].length, sets[1].length);
+        const sa = [], sb = [];
+        for (let k = 0; k < len; k++) {
+          const x = sets[0][k], y = sets[1][k];
+          if (x == null || y == null || x + y === 0) continue;
+          sa.push(x); sb.push(y);
+        }
+        matches.set(mid, { id: mid, a: prs[0].attrs.pid, b: prs[1].attrs.pid, sa, sb });
+      }
+    }
+    const header = findAll(gt, (n) => n.tag === 'tr' && hasClass(n, 'header1'))[0];
+    const hText = header ? text(nodeText(kids(header)[0] || header)) : '';
+    const name = (hText.match(/grupa\s*\S+/i) || [])[0] || `Grupa ${gi + 1}`;
+    groups.push({ name, gid: gt.attrs.gid ?? String(gi + 1), players, matches: [...matches.values()].filter((x) => x.sa.length) });
+  });
+  return groups;
+}
+
+async function get(url, extra = {}) {
+  const res = await fetch(url, {
+    headers: { 'User-Agent': 'Mozilla/5.0 (compatible; squash-liga/1.0)', 'Accept-Language': 'pl', ...extra },
     signal: AbortSignal.timeout(25000),
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.text();
+}
+
+async function load() {
+  const file = process.argv[2];
+  if (file) return readFile(file, 'utf8');
+  return get(CONFIG.rankingUrl);
+}
+
+const roundId = (url) => ((url || '').match(/,(\d+)\.html/) || [])[1] || null;
+const isoToday = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Warsaw' }).format(new Date());
+const addDays = (iso, d) => { const t = new Date(iso + 'T12:00:00Z'); t.setUTCDate(t.getUTCDate() + d); return t.toISOString().slice(0, 10); };
+
+// Pobiera grupy i wyniki rund: brakujące rundy z przeszłości, ostatnie 7 dni (poprawki wyników)
+// oraz najbliższą rundę (przydział do grup bywa wcześniej).
+async function updateRounds(rounds) {
+  await mkdir(ROUNDS_DIR, { recursive: true });
+  const today = isoToday();
+  const testFile = process.argv[3];
+  const status = {};
+  for (const r of rounds) {
+    const id = roundId(r.url);
+    if (!id || !r.date || /fina/i.test(r.name)) continue;
+    const file = path.join(ROUNDS_DIR, `${id}.json`);
+    const exists = existsSync(file);
+    if (exists) status[id] = true;
+    const recent = r.date >= addDays(today, -7) && r.date <= addDays(today, 7);
+    const pastMissing = r.date <= today && !exists;
+    if (!testFile && !recent && !pastMissing) continue;
+    if (testFile && id !== roundId(CONFIG.rounds[10][2])) continue; // test: tylko runda 11
+    try {
+      const html = testFile ? await readFile(testFile, 'utf8')
+        : await get(RESULTS_URL(id), { 'X-Requested-With': 'XMLHttpRequest', Referer: r.url });
+      const groups = parseRoundResults(html);
+      if (!groups.length) {
+        if (r.date <= today) warn(`${r.name}: nie znaleziono grup w odpowiedzi bo5.pl (${html.length} znaków).`);
+        continue;
+      }
+      const data = { id, name: r.name, date: r.date, url: r.url, groups };
+      const text = JSON.stringify(data, null, 1) + '\n';
+      const old = exists ? await readFile(file, 'utf8') : null;
+      if (old !== text) {
+        await writeFile(file, text);
+        const n = groups.reduce((s, g) => s + g.matches.length, 0);
+        console.log(`${r.name}: zapisano ${groups.length} grup, ${n} meczów.`);
+      }
+      status[id] = true;
+      if (!testFile) await new Promise((res) => setTimeout(res, 1500)); // nie obciążamy bo5.pl
+    } catch (e) {
+      warn(`${r.name}: nie udało się pobrać wyników rundy (${e.message}).`);
+    }
+  }
+  return status;
 }
 
 async function main() {
@@ -149,6 +312,12 @@ async function main() {
     return;
   }
 
+  const rounds = parsed.columns.map((col, k) => {
+    const cfg = CONFIG.rounds.find(([n]) => n.toLowerCase() === col.toLowerCase()) || CONFIG.rounds[k] || [col, null, null];
+    return { name: col, date: cfg[1], url: cfg[2] };
+  });
+  const have = await updateRounds(rounds);
+
   const data = {
     name: CONFIG.name,
     club: CONFIG.club,
@@ -157,16 +326,13 @@ async function main() {
     rulesUrl: CONFIG.rulesUrl,
     clubUrl: CONFIG.clubUrl,
     bestOf: CONFIG.bestOf,
-    rounds: parsed.columns.map((col, k) => {
-      const cfg = CONFIG.rounds.find(([n]) => n.toLowerCase() === col.toLowerCase()) || CONFIG.rounds[k] || [col, null, null];
-      return { name: col, date: cfg[1], url: cfg[2] };
-    }),
+    rounds: rounds.map((r) => { const id = roundId(r.url); return { ...r, id, details: !!(id && have[id]) }; }),
     players: parsed.players,
   };
 
   const prev = existsSync(OUT) ? JSON.parse(await readFile(OUT, 'utf8')) : null;
   if (prev && JSON.stringify({ ...prev, updated: null }) === JSON.stringify({ ...data, updated: null })) {
-    console.log(`Czwartkowe Granie: bez zmian (${data.players.length} graczy).`);
+    console.log(`Czwartkowe Granie: ranking bez zmian (${data.players.length} graczy).`);
     return;
   }
   data.updated = new Date().toISOString();

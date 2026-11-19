@@ -60,6 +60,16 @@ Link do konkretnej grupy: `https://TWÓJ-LOGIN.github.io/liga/#g=80`
   `GROUPS = [100, 90, 80, 70, 60]` i `ZONE = 3`.
 - **Własny adres** (np. liga.squashpoint.pl): Settings → Pages → Custom domain.
 
+## Podstrona „Czwartkowe Granie”
+- Adres: `https://TWÓJ-LOGIN.github.io/liga/czwartki.html` (przełącznik u góry obu stron).
+- Ranking pobierany z bo5.pl (Factory Squash&Fitness) raz na godzinę: `scripts/fetch-bo5.mjs`.
+- Grupy i wyniki rund pobierane z bo5.pl (`site/data/czwartki-rundy/<id>.json`): brakujące rundy z przeszłości
+  jednorazowo, a rundy z ostatnich/najbliższych 7 dni co godzinę (poprawki wyników, przydział do grup).
+  Na podstronie: kliknij rundę w terminarzu lub numer rundy w nagłówku rankingu.
+- Nowy sezon: na początku `scripts/fetch-bo5.mjs` zmień `rankingUrl`, `rulesUrl` i listę `rounds`
+  (adresy i daty rund skopiuj z bo5.pl/factory).
+- Gracze, którzy występują też w lidze SquashPoint, mają znaczek „SquashPoint” (dopasowanie po nazwisku i imieniu).
+
 ## Zasady w tabeli
 - Kolejność: punkty → przy równej liczbie punktów mecz bezpośredni
   (przy 3+ osobach: mała tabela ich meczów między sobą) → bilans setów → bilans małych punktów.
@@ -71,7 +81,9 @@ Link do konkretnej grupy: `https://TWÓJ-LOGIN.github.io/liga/#g=80`
 ```
 .github/workflows/update.yml   automat: pobierz → zapisz → opublikuj
 scripts/fetch.mjs              pobieranie danych z squashweb.pl (bez telefonów)
-site/index.html, style.css, app.js   strona
+scripts/fetch-bo5.mjs          ranking Czwartkowego Grania z bo5.pl
+site/index.html, style.css, app.js   strona ligi
+site/czwartki.html, czwartki.js      podstrona Czwartkowe Granie
 site/data/                     pobrane dane (aktualizowane automatycznie)
 test/tabele-sample.json        przykładowe dane do testów
 ```

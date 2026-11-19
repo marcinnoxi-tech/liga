@@ -193,3 +193,33 @@ h2 { margin: 0; font-family: var(--head); font-size: 30px; font-weight: 700; }
 .round.next { background: var(--dark); color: #fff; }
 .round.next span { color: var(--lime); }
 .round.done span::before { content: '✓ '; color: var(--green); font-weight: 700; }
+
+/* Widok rundy */
+.round.active { outline: 2px solid var(--green); }
+.round .ext { font-size: 11px; color: var(--muted2); }
+.rnav { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn { display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border-radius: 8px; background: var(--dark); color: #fff; text-decoration: none; font-size: 13px; font-weight: 600; }
+.btn:hover { color: var(--lime); }
+.btn.ghost { background: var(--soft); color: var(--ink); }
+.btn.ghost:hover { color: var(--green); }
+.rgroups { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr)); gap: 16px; }
+.rgroup { background: var(--soft); border-radius: 10px; padding: 14px 14px 10px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.rgroup h3 { margin: 0; font-family: var(--head); font-size: 24px; }
+.gtab { min-width: 440px; }
+.gr { display: grid; grid-template-columns: 40px minmax(150px, 1fr) 62px 52px 44px 70px; align-items: center; min-height: 38px; font-size: 13px; border-bottom: 1px solid var(--line); }
+.gr.gh { min-height: 0; padding-bottom: 6px; font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.gr .pname { font-size: 13px; }
+.xt { min-width: 420px; }
+.xr { display: grid; align-items: center; }
+.xname { font-size: 12px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 6px; }
+.xt .cell > span { height: auto; min-height: 44px; padding: 3px 2px; text-align: center; }
+.xt .cell small { font-size: 9px; line-height: 1.25; white-space: normal; word-spacing: 2px; }
+.xt .self { background: repeating-linear-gradient(135deg, var(--line) 0 4px, #fff 4px 8px); }
+.xt .empty { background: #fff; }
+
+@media (max-width: 640px) {
+  .gtab { min-width: 0; }
+  .gr { grid-template-columns: 36px minmax(0, 1fr) 50px 44px 36px; }
+  .gr .hm { display: none; }
+  .rgroup { padding: 12px 8px 8px; }
+}
