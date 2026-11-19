@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Czwartkowe Granie – ranking</title>
+<meta name="description" content="Ranking Czwartkowego Grania (Factory Squash&amp;Fitness, Sosnowiec).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner" style="padding-bottom:28px">
+    <nav class="pages" aria-label="Strony">
+      <a href="./">Liga SquashPoint</a>
+      <a href="czwartki.html" aria-current="page">Czwartkowe Granie</a>
+    </nav>
+    <div class="top-row">
+      <div class="brand">
+        <div class="kicker" id="kicker">Factory Squash&amp;Fitness · Sosnowiec</div>
+        <h1>Czwartkowe Granie</h1>
+      </div>
+      <div class="top-stats">
+        <div><b id="statPlayers">–</b><span>graczy w rankingu</span></div>
+        <div><b id="statRounds">–</b><span>rozegranych rund</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap main" id="main">
+  <p class="loading">Wczytywanie rankingu…</p>
+</main>
+
+<footer class="wrap foot">
+  <span>Dane: <a id="srcLink" href="https://bo5.pl/factory" rel="noopener">bo5.pl – Factory Squash&amp;Fitness</a> · aktualizacja automatyczna co ok. godzinę</span>
+  <span id="updated"></span>
+</footer>
+
+<script src="czwartki.js"></script>
+</body>
+</html>

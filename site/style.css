@@ -40,6 +40,12 @@ h2 { margin: 0; font-family: var(--head); font-size: 30px; font-weight: 700; }
 .tab { min-height: 44px; padding: 0 20px; border: 0; border-radius: 10px 10px 0 0; cursor: pointer; font-family: var(--head); font-size: 20px; font-weight: 700; letter-spacing: .02em; background: var(--dark2); color: #d9e3d3; }
 .tab[aria-selected="true"] { background: var(--bg); color: var(--ink); }
 
+/* Przełącznik podstron */
+.pages { display: flex; flex-wrap: wrap; gap: 6px; }
+.pages a { display: inline-flex; align-items: center; min-height: 36px; padding: 0 14px; border-radius: 99px; font-size: 13px; font-weight: 600; text-decoration: none; color: #d9e3d3; border: 1px solid #45553f; }
+.pages a:hover { color: #fff; border-color: #7a8c72; }
+.pages a[aria-current="page"] { background: var(--lime); border-color: var(--lime); color: var(--dark); }
+
 /* Treść */
 .main { padding-top: 28px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 28px; }
 .loading, .error { background: var(--card); border-radius: 12px; padding: 22px; margin: 0; }
@@ -153,3 +159,37 @@ h2 { margin: 0; font-family: var(--head); font-size: 30px; font-weight: 700; }
   .name { font-size: 14px; }
   .pts { font-size: 22px; }
 }
+
+/* ===== Czwartkowe Granie ===== */
+.tools { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; padding: 0 22px 14px; }
+.search { min-height: 40px; width: 240px; max-width: 100%; padding: 0 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--soft); color: var(--ink); }
+.rk { border-collapse: separate; border-spacing: 0; font-size: 13px; min-width: 100%; }
+.rk th, .rk td { padding: 0 4px; height: 40px; text-align: center; white-space: nowrap; border-bottom: 1px solid var(--bg); }
+.rk thead th { height: auto; padding: 8px 4px; font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line); vertical-align: bottom; background: var(--card); }
+.rk thead th a { color: var(--muted); text-decoration: none; display: block; }
+.rk thead th a:hover { color: var(--green); }
+.rk thead th small { display: block; font-size: 10px; font-weight: 500; letter-spacing: 0; text-transform: none; }
+.rk .stick { position: sticky; background: var(--card); z-index: 1; }
+.rk .s1 { left: 0; width: 48px; min-width: 48px; padding-left: 16px; }
+.rk .s2 { left: 48px; text-align: left; min-width: 190px; box-shadow: 6px 0 6px -6px rgba(0,0,0,.12); }
+.rk tr.me td.stick, .rk tr.me td { background: var(--sel); }
+.rk .pname { font-weight: 600; font-size: 14px; display: flex; align-items: center; gap: 6px; }
+.rk .num { font-variant-numeric: tabular-nums; }
+.rk .sum { font-family: var(--head); font-size: 22px; font-weight: 700; padding-right: 16px; text-align: right; }
+.rk .rc { min-width: 38px; }
+.rk .rc span { display: inline-flex; width: 34px; height: 28px; border-radius: 5px; align-items: center; justify-content: center; font-weight: 600; font-variant-numeric: tabular-nums; }
+.rk .rc .dash { color: #b3bab0; }
+.rk .future { color: #b3bab0; }
+.medal { display: inline-flex; width: 28px; height: 28px; border-radius: 6px; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; background: var(--bg); }
+.medal.m1 { background: #d9a520; color: #2a1f00; }
+.medal.m2 { background: #b9c0c6; color: #1e2428; }
+.medal.m3 { background: #c98a52; color: #2b1606; }
+.pill.sp { background: #e6f2da; color: #2c5a0e; }
+.rounds { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.round { background: var(--soft); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; text-decoration: none; color: var(--ink); min-height: 44px; }
+.round:hover { outline: 2px solid var(--line); }
+.round b { font-family: var(--head); font-size: 20px; }
+.round span { font-size: 12px; color: var(--muted); }
+.round.next { background: var(--dark); color: #fff; }
+.round.next span { color: var(--lime); }
+.round.done span::before { content: '✓ '; color: var(--green); font-weight: 700; }
