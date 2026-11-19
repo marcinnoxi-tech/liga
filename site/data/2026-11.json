@@ -1,6 +1,6 @@
 {
  "month": "2026-11",
- "updated": "2026-11-18T20:06:39.602Z",
+ "updated": "2026-11-19T08:19:08.021Z",
  "players": [
   {
    "id": 5093,
@@ -38,10 +38,10 @@
    "kontuzja": false
   },
   {
-   "id": 449,
-   "nazwisko": "Kuczera",
-   "imie": "Daniel",
-   "grupa": 70,
+   "id": 289,
+   "nazwisko": "Tórz",
+   "imie": "Marcin",
+   "grupa": 80,
    "kontuzja": false
   },
   {
@@ -52,13 +52,6 @@
    "kontuzja": false
   },
   {
-   "id": 306,
-   "nazwisko": "Cegielski",
-   "imie": "Wojtek",
-   "grupa": 100,
-   "kontuzja": false
-  },
-  {
    "id": 412,
    "nazwisko": "Dziubiński",
    "imie": "Marcin",
@@ -66,9 +59,23 @@
    "kontuzja": false
   },
   {
-   "id": 289,
-   "nazwisko": "Tórz",
-   "imie": "Marcin",
+   "id": 449,
+   "nazwisko": "Kuczera",
+   "imie": "Daniel",
+   "grupa": 70,
+   "kontuzja": false
+  },
+  {
+   "id": 306,
+   "nazwisko": "Cegielski",
+   "imie": "Wojtek",
+   "grupa": 100,
+   "kontuzja": false
+  },
+  {
+   "id": 509,
+   "nazwisko": "Górny",
+   "imie": "Kamil",
    "grupa": 80,
    "kontuzja": false
   },
@@ -80,38 +87,10 @@
    "kontuzja": false
   },
   {
-   "id": 367,
-   "nazwisko": "Szparniak",
-   "imie": "Tomasz",
-   "grupa": 90,
-   "kontuzja": false
-  },
-  {
-   "id": 126,
-   "nazwisko": "Koch",
-   "imie": "Mateusz",
-   "grupa": 100,
-   "kontuzja": false
-  },
-  {
    "id": 447,
    "nazwisko": "Zbytniewska",
    "imie": "Anna",
    "grupa": 60,
-   "kontuzja": false
-  },
-  {
-   "id": 509,
-   "nazwisko": "Górny",
-   "imie": "Kamil",
-   "grupa": 80,
-   "kontuzja": false
-  },
-  {
-   "id": 270,
-   "nazwisko": "Spławski",
-   "imie": "Tomasz",
-   "grupa": 90,
    "kontuzja": false
   },
   {
@@ -122,24 +101,24 @@
    "kontuzja": false
   },
   {
+   "id": 367,
+   "nazwisko": "Szparniak",
+   "imie": "Tomasz",
+   "grupa": 90,
+   "kontuzja": false
+  },
+  {
+   "id": 512,
+   "nazwisko": "Herod",
+   "imie": "Piotr",
+   "grupa": 90,
+   "kontuzja": false
+  },
+  {
    "id": 288,
    "nazwisko": "Korycki",
    "imie": "Gabriel",
    "grupa": 60,
-   "kontuzja": false
-  },
-  {
-   "id": 514,
-   "nazwisko": "Szafraniec",
-   "imie": "Piotr",
-   "grupa": 80,
-   "kontuzja": false
-  },
-  {
-   "id": 522,
-   "nazwisko": "Jurczak",
-   "imie": "Łukasz",
-   "grupa": 70,
    "kontuzja": false
   },
   {
@@ -157,6 +136,13 @@
    "kontuzja": false
   },
   {
+   "id": 514,
+   "nazwisko": "Szafraniec",
+   "imie": "Piotr",
+   "grupa": 80,
+   "kontuzja": false
+  },
+  {
    "id": 370,
    "nazwisko": "Kaniowski",
    "imie": "Mariusz",
@@ -171,24 +157,24 @@
    "kontuzja": false
   },
   {
-   "id": 512,
-   "nazwisko": "Herod",
-   "imie": "Piotr",
-   "grupa": 90,
-   "kontuzja": false
-  },
-  {
-   "id": 319,
-   "nazwisko": "Złocki",
-   "imie": "Damian",
-   "grupa": 80,
-   "kontuzja": false
-  },
-  {
-   "id": 521,
-   "nazwisko": "Tadra",
-   "imie": "Damian",
+   "id": 284,
+   "nazwisko": "Florek",
+   "imie": "Grzegorz",
    "grupa": 70,
+   "kontuzja": false
+  },
+  {
+   "id": 126,
+   "nazwisko": "Koch",
+   "imie": "Mateusz",
+   "grupa": 100,
+   "kontuzja": false
+  },
+  {
+   "id": 343,
+   "nazwisko": "Zając",
+   "imie": "Mateusz",
+   "grupa": 90,
    "kontuzja": false
   },
   {
@@ -199,10 +185,59 @@
    "kontuzja": false
   },
   {
-   "id": 225,
-   "nazwisko": "Gajda",
-   "imie": "Wojciech",
+   "id": 258,
+   "nazwisko": "Jarosiński",
+   "imie": "Marcin",
+   "grupa": 100,
+   "kontuzja": false
+  },
+  {
+   "id": 473,
+   "nazwisko": "Brzęska",
+   "imie": "Bartosz",
    "grupa": 90,
+   "kontuzja": false
+  },
+  {
+   "id": 474,
+   "nazwisko": "Strzewiczek",
+   "imie": "Marcin",
+   "grupa": 80,
+   "kontuzja": false
+  },
+  {
+   "id": 522,
+   "nazwisko": "Jurczak",
+   "imie": "Łukasz",
+   "grupa": 70,
+   "kontuzja": false
+  },
+  {
+   "id": 319,
+   "nazwisko": "Złocki",
+   "imie": "Damian",
+   "grupa": 80,
+   "kontuzja": false
+  },
+  {
+   "id": 259,
+   "nazwisko": "Jastrzębski",
+   "imie": "Adam",
+   "grupa": 90,
+   "kontuzja": false
+  },
+  {
+   "id": 521,
+   "nazwisko": "Tadra",
+   "imie": "Damian",
+   "grupa": 70,
+   "kontuzja": false
+  },
+  {
+   "id": 510,
+   "nazwisko": "Lamprecht",
+   "imie": "Łukasz",
+   "grupa": 60,
    "kontuzja": false
   },
   {
@@ -220,62 +255,6 @@
    "kontuzja": false
   },
   {
-   "id": 474,
-   "nazwisko": "Strzewiczek",
-   "imie": "Marcin",
-   "grupa": 80,
-   "kontuzja": false
-  },
-  {
-   "id": 510,
-   "nazwisko": "Lamprecht",
-   "imie": "Łukasz",
-   "grupa": 60,
-   "kontuzja": false
-  },
-  {
-   "id": 473,
-   "nazwisko": "Brzęska",
-   "imie": "Bartosz",
-   "grupa": 90,
-   "kontuzja": false
-  },
-  {
-   "id": 258,
-   "nazwisko": "Jarosiński",
-   "imie": "Marcin",
-   "grupa": 100,
-   "kontuzja": false
-  },
-  {
-   "id": 52,
-   "nazwisko": "Walczak",
-   "imie": "Adam",
-   "grupa": 100,
-   "kontuzja": false
-  },
-  {
-   "id": 464,
-   "nazwisko": "Korpus",
-   "imie": "Paweł",
-   "grupa": 80,
-   "kontuzja": false
-  },
-  {
-   "id": 421,
-   "nazwisko": "Hachuła",
-   "imie": "Kamil",
-   "grupa": 70,
-   "kontuzja": false
-  },
-  {
-   "id": 343,
-   "nazwisko": "Zając",
-   "imie": "Mateusz",
-   "grupa": 90,
-   "kontuzja": false
-  },
-  {
    "id": 515,
    "nazwisko": "Malcharek",
    "imie": "Łukasz",
@@ -290,13 +269,6 @@
    "kontuzja": false
   },
   {
-   "id": 284,
-   "nazwisko": "Florek",
-   "imie": "Grzegorz",
-   "grupa": 70,
-   "kontuzja": false
-  },
-  {
    "id": 264,
    "nazwisko": "Lau",
    "imie": "Oskar",
@@ -304,10 +276,24 @@
    "kontuzja": false
   },
   {
-   "id": 469,
-   "nazwisko": "Czyż",
-   "imie": "Krzysztof",
+   "id": 270,
+   "nazwisko": "Spławski",
+   "imie": "Tomasz",
    "grupa": 90,
+   "kontuzja": false
+  },
+  {
+   "id": 52,
+   "nazwisko": "Walczak",
+   "imie": "Adam",
+   "grupa": 100,
+   "kontuzja": false
+  },
+  {
+   "id": 421,
+   "nazwisko": "Hachuła",
+   "imie": "Kamil",
+   "grupa": 70,
    "kontuzja": false
   },
   {
@@ -318,9 +304,37 @@
    "kontuzja": false
   },
   {
-   "id": 453,
-   "nazwisko": "Deptuła",
-   "imie": "Tomasz",
+   "id": 464,
+   "nazwisko": "Korpus",
+   "imie": "Paweł",
+   "grupa": 80,
+   "kontuzja": false
+  },
+  {
+   "id": 225,
+   "nazwisko": "Gajda",
+   "imie": "Wojciech",
+   "grupa": 90,
+   "kontuzja": false
+  },
+  {
+   "id": 418,
+   "nazwisko": "Praczkiewicz",
+   "imie": "Urszula",
+   "grupa": 70,
+   "kontuzja": false
+  },
+  {
+   "id": 518,
+   "nazwisko": "Bochniak",
+   "imie": "Andrzej",
+   "grupa": 60,
+   "kontuzja": false
+  },
+  {
+   "id": 469,
+   "nazwisko": "Czyż",
+   "imie": "Krzysztof",
    "grupa": 90,
    "kontuzja": false
   },
@@ -332,13 +346,6 @@
    "kontuzja": false
   },
   {
-   "id": 418,
-   "nazwisko": "Praczkiewicz",
-   "imie": "Urszula",
-   "grupa": 70,
-   "kontuzja": false
-  },
-  {
    "id": 5097,
    "nazwisko": "Widerski",
    "imie": "Marcin",
@@ -346,10 +353,10 @@
    "kontuzja": false
   },
   {
-   "id": 518,
-   "nazwisko": "Bochniak",
-   "imie": "Andrzej",
-   "grupa": 60,
+   "id": 453,
+   "nazwisko": "Deptuła",
+   "imie": "Tomasz",
+   "grupa": 90,
    "kontuzja": false
   },
   {
@@ -360,24 +367,17 @@
    "kontuzja": false
   },
   {
-   "id": 252,
-   "nazwisko": "Jędryka",
-   "imie": "Krzysztof",
-   "grupa": 70,
-   "kontuzja": false
-  },
-  {
-   "id": 259,
-   "nazwisko": "Jastrzębski",
-   "imie": "Adam",
-   "grupa": 90,
-   "kontuzja": false
-  },
-  {
    "id": 5096,
    "nazwisko": "Zych",
    "imie": "Oskar",
    "grupa": 80,
+   "kontuzja": false
+  },
+  {
+   "id": 252,
+   "nazwisko": "Jędryka",
+   "imie": "Krzysztof",
+   "grupa": 70,
    "kontuzja": false
   },
   {
@@ -715,30 +715,6 @@
   {
    "id": 10776,
    "data": "2026-11-05",
-   "a": 223,
-   "b": 521,
-   "wa": 4,
-   "wb": 1,
-   "pa": 56,
-   "pb": 14,
-   "sa": [
-    11,
-    11,
-    11,
-    7,
-    11
-   ],
-   "sb": [
-    6,
-    8,
-    8,
-    11,
-    5
-   ]
-  },
-  {
-   "id": 10777,
-   "data": "2026-11-05",
    "a": 5093,
    "b": 412,
    "wa": 4,
@@ -758,6 +734,30 @@
     8,
     9,
     11
+   ]
+  },
+  {
+   "id": 10777,
+   "data": "2026-11-05",
+   "a": 223,
+   "b": 521,
+   "wa": 4,
+   "wb": 1,
+   "pa": 56,
+   "pb": 14,
+   "sa": [
+    11,
+    11,
+    11,
+    7,
+    11
+   ],
+   "sb": [
+    6,
+    8,
+    8,
+    11,
+    5
    ]
   },
   {
@@ -1051,25 +1051,25 @@
   {
    "id": 10790,
    "data": "2026-11-08",
-   "a": 509,
-   "b": 514,
-   "wa": 1,
-   "wb": 4,
-   "pa": 16,
-   "pb": 64,
+   "a": 297,
+   "b": 319,
+   "wa": 4,
+   "wb": 1,
+   "pa": 64,
+   "pb": 16,
    "sa": [
-    7,
-    6,
-    5,
-    7,
-    11
+    11,
+    11,
+    11,
+    11,
+    6
    ],
    "sb": [
-    11,
-    11,
-    11,
-    11,
-    4
+    6,
+    2,
+    3,
+    4,
+    11
    ]
   },
   {
@@ -1219,29 +1219,29 @@
   {
    "id": 10797,
    "data": "2026-11-08",
-   "a": 297,
-   "b": 319,
-   "wa": 4,
-   "wb": 1,
-   "pa": 64,
-   "pb": 16,
+   "a": 509,
+   "b": 514,
+   "wa": 1,
+   "wb": 4,
+   "pa": 16,
+   "pb": 64,
    "sa": [
-    11,
-    11,
-    11,
-    11,
-    6
+    7,
+    6,
+    5,
+    7,
+    11
    ],
    "sb": [
-    6,
-    2,
-    3,
-    4,
-    11
+    11,
+    11,
+    11,
+    11,
+    4
    ]
   },
   {
-   "id": 10798,
+   "id": 10799,
    "data": "2026-11-08",
    "a": 464,
    "b": 509,
@@ -1265,7 +1265,7 @@
    ]
   },
   {
-   "id": 10799,
+   "id": 10800,
    "data": "2026-11-08",
    "a": 223,
    "b": 418,
@@ -1289,7 +1289,7 @@
    ]
   },
   {
-   "id": 10800,
+   "id": 10801,
    "data": "2026-11-09",
    "a": 186,
    "b": 469,
@@ -1313,7 +1313,7 @@
    ]
   },
   {
-   "id": 10801,
+   "id": 10802,
    "data": "2026-11-09",
    "a": 482,
    "b": 418,
@@ -1337,7 +1337,7 @@
    ]
   },
   {
-   "id": 10802,
+   "id": 10803,
    "data": "2026-11-09",
    "a": 453,
    "b": 270,
@@ -1361,7 +1361,7 @@
    ]
   },
   {
-   "id": 10803,
+   "id": 10804,
    "data": "2026-11-09",
    "a": 513,
    "b": 343,
@@ -1385,7 +1385,7 @@
    ]
   },
   {
-   "id": 10804,
+   "id": 10805,
    "data": "2026-11-09",
    "a": 269,
    "b": 52,
@@ -1409,7 +1409,7 @@
    ]
   },
   {
-   "id": 10805,
+   "id": 10806,
    "data": "2026-11-09",
    "a": 233,
    "b": 286,
@@ -1433,7 +1433,7 @@
    ]
   },
   {
-   "id": 10806,
+   "id": 10807,
    "data": "2026-11-10",
    "a": 370,
    "b": 474,
@@ -1457,7 +1457,7 @@
    ]
   },
   {
-   "id": 10807,
+   "id": 10808,
    "data": "2026-11-10",
    "a": 521,
    "b": 449,
@@ -1481,7 +1481,7 @@
    ]
   },
   {
-   "id": 10808,
+   "id": 10809,
    "data": "2026-11-10",
    "a": 90,
    "b": 289,
@@ -1505,7 +1505,7 @@
    ]
   },
   {
-   "id": 10809,
+   "id": 10810,
    "data": "2026-11-10",
    "a": 5098,
    "b": 421,
@@ -1529,7 +1529,7 @@
    ]
   },
   {
-   "id": 10810,
+   "id": 10811,
    "data": "2026-11-11",
    "a": 186,
    "b": 513,
@@ -1553,7 +1553,7 @@
    ]
   },
   {
-   "id": 10811,
+   "id": 10812,
    "data": "2026-11-11",
    "a": 512,
    "b": 473,
@@ -1577,7 +1577,7 @@
    ]
   },
   {
-   "id": 10812,
+   "id": 10813,
    "data": "2026-11-11",
    "a": 297,
    "b": 5097,
@@ -1601,7 +1601,7 @@
    ]
   },
   {
-   "id": 10813,
+   "id": 10814,
    "data": "2026-11-11",
    "a": 126,
    "b": 511,
@@ -1625,7 +1625,7 @@
    ]
   },
   {
-   "id": 10814,
+   "id": 10815,
    "data": "2026-11-11",
    "a": 482,
    "b": 284,
@@ -1649,7 +1649,7 @@
    ]
   },
   {
-   "id": 10815,
+   "id": 10816,
    "data": "2026-11-11",
    "a": 464,
    "b": 297,
@@ -1673,7 +1673,7 @@
    ]
   },
   {
-   "id": 10816,
+   "id": 10817,
    "data": "2026-11-11",
    "a": 319,
    "b": 474,
@@ -1697,7 +1697,7 @@
    ]
   },
   {
-   "id": 10817,
+   "id": 10818,
    "data": "2026-11-11",
    "a": 421,
    "b": 449,
@@ -1721,7 +1721,7 @@
    ]
   },
   {
-   "id": 10818,
+   "id": 10819,
    "data": "2026-11-12",
    "a": 126,
    "b": 52,
@@ -1745,7 +1745,7 @@
    ]
   },
   {
-   "id": 10819,
+   "id": 10820,
    "data": "2026-11-12",
    "a": 516,
    "b": 522,
@@ -1769,7 +1769,7 @@
    ]
   },
   {
-   "id": 10820,
+   "id": 10821,
    "data": "2026-11-12",
    "a": 5097,
    "b": 289,
@@ -1793,7 +1793,7 @@
    ]
   },
   {
-   "id": 10821,
+   "id": 10822,
    "data": "2026-11-12",
    "a": 223,
    "b": 482,
@@ -1817,7 +1817,7 @@
    ]
   },
   {
-   "id": 10822,
+   "id": 10823,
    "data": "2026-11-12",
    "a": 258,
    "b": 511,
@@ -1841,7 +1841,7 @@
    ]
   },
   {
-   "id": 10823,
+   "id": 10824,
    "data": "2026-11-13",
    "a": 52,
    "b": 264,
@@ -1865,7 +1865,7 @@
    ]
   },
   {
-   "id": 10824,
+   "id": 10825,
    "data": "2026-11-13",
    "a": 343,
    "b": 225,
@@ -1889,7 +1889,7 @@
    ]
   },
   {
-   "id": 10825,
+   "id": 10826,
    "data": "2026-11-13",
    "a": 521,
    "b": 5098,
@@ -1913,7 +1913,7 @@
    ]
   },
   {
-   "id": 10826,
+   "id": 10827,
    "data": "2026-11-13",
    "a": 223,
    "b": 284,
@@ -1937,7 +1937,7 @@
    ]
   },
   {
-   "id": 10827,
+   "id": 10828,
    "data": "2026-11-13",
    "a": 514,
    "b": 370,
@@ -1961,7 +1961,7 @@
    ]
   },
   {
-   "id": 10828,
+   "id": 10829,
    "data": "2026-11-14",
    "a": 225,
    "b": 513,
@@ -1985,7 +1985,7 @@
    ]
   },
   {
-   "id": 10829,
+   "id": 10830,
    "data": "2026-11-14",
    "a": 453,
    "b": 367,
@@ -2004,6 +2004,486 @@
     11,
     12,
     12,
+    11,
+    11
+   ]
+  },
+  {
+   "id": 10831,
+   "data": "2026-11-14",
+   "a": 482,
+   "b": 522,
+   "wa": 4,
+   "wb": 1,
+   "pa": 56,
+   "pb": 14,
+   "sa": [
+    4,
+    11,
+    11,
+    11,
+    11
+   ],
+   "sb": [
+    11,
+    7,
+    7,
+    8,
+    8
+   ]
+  },
+  {
+   "id": 10832,
+   "data": "2026-11-14",
+   "a": 286,
+   "b": 264,
+   "wa": 1,
+   "wb": 4,
+   "pa": 20,
+   "pb": 80,
+   "sa": [
+    8,
+    7,
+    7,
+    11,
+    7
+   ],
+   "sb": [
+    11,
+    11,
+    11,
+    7,
+    11
+   ]
+  },
+  {
+   "id": 10833,
+   "data": "2026-11-15",
+   "a": 186,
+   "b": 367,
+   "wa": 2,
+   "wb": 3,
+   "pa": 36,
+   "pb": 54,
+   "sa": [
+    6,
+    11,
+    5,
+    11,
+    9
+   ],
+   "sb": [
+    11,
+    8,
+    11,
+    8,
+    11
+   ]
+  },
+  {
+   "id": 10834,
+   "data": "2026-11-15",
+   "a": 233,
+   "b": 52,
+   "wa": 5,
+   "wb": 0,
+   "pa": 110,
+   "pb": 5,
+   "sa": [
+    11,
+    11,
+    11,
+    11,
+    11
+   ],
+   "sb": [
+    7,
+    5,
+    4,
+    8,
+    1
+   ]
+  },
+  {
+   "id": 10835,
+   "data": "2026-11-15",
+   "a": 418,
+   "b": 284,
+   "wa": 0,
+   "wb": 5,
+   "pa": 5,
+   "pb": 80,
+   "sa": [
+    5,
+    12,
+    6,
+    9,
+    5
+   ],
+   "sb": [
+    11,
+    14,
+    11,
+    11,
+    11
+   ]
+  },
+  {
+   "id": 10836,
+   "data": "2026-11-15",
+   "a": 259,
+   "b": 513,
+   "wa": 0,
+   "wb": 5,
+   "pa": 5,
+   "pb": 100,
+   "sa": [
+    9,
+    8,
+    9,
+    8,
+    9
+   ],
+   "sb": [
+    11,
+    11,
+    11,
+    11,
+    11
+   ]
+  },
+  {
+   "id": 10837,
+   "data": "2026-11-15",
+   "a": 269,
+   "b": 286,
+   "wa": 4,
+   "wb": 1,
+   "pa": 80,
+   "pb": 20,
+   "sa": [
+    11,
+    11,
+    9,
+    11,
+    11
+   ],
+   "sb": [
+    8,
+    6,
+    11,
+    6,
+    6
+   ]
+  },
+  {
+   "id": 10838,
+   "data": "2026-11-16",
+   "a": 516,
+   "b": 521,
+   "wa": 4,
+   "wb": 1,
+   "pa": 56,
+   "pb": 14,
+   "sa": [
+    9,
+    11,
+    11,
+    11,
+    11
+   ],
+   "sb": [
+    11,
+    7,
+    8,
+    5,
+    6
+   ]
+  },
+  {
+   "id": 10839,
+   "data": "2026-11-16",
+   "a": 513,
+   "b": 270,
+   "wa": 5,
+   "wb": 0,
+   "pa": 100,
+   "pb": 5,
+   "sa": [
+    11,
+    11,
+    11,
+    11,
+    13
+   ],
+   "sb": [
+    4,
+    1,
+    3,
+    4,
+    11
+   ]
+  },
+  {
+   "id": 10840,
+   "data": "2026-11-16",
+   "a": 259,
+   "b": 343,
+   "wa": 5,
+   "wb": 0,
+   "pa": 100,
+   "pb": 5,
+   "sa": [
+    11,
+    13,
+    11,
+    11,
+    11
+   ],
+   "sb": [
+    8,
+    11,
+    9,
+    7,
+    9
+   ]
+  },
+  {
+   "id": 10841,
+   "data": "2026-11-17",
+   "a": 186,
+   "b": 343,
+   "wa": 3,
+   "wb": 2,
+   "pa": 54,
+   "pb": 36,
+   "sa": [
+    11,
+    11,
+    8,
+    5,
+    11
+   ],
+   "sb": [
+    4,
+    4,
+    11,
+    11,
+    1
+   ]
+  },
+  {
+   "id": 10842,
+   "data": "2026-11-17",
+   "a": 453,
+   "b": 343,
+   "wa": 1,
+   "wb": 4,
+   "pa": 18,
+   "pb": 72,
+   "sa": [
+    11,
+    7,
+    6,
+    9,
+    3
+   ],
+   "sb": [
+    8,
+    11,
+    11,
+    11,
+    11
+   ]
+  },
+  {
+   "id": 10843,
+   "data": "2026-11-17",
+   "a": 90,
+   "b": 474,
+   "wa": 4,
+   "wb": 1,
+   "pa": 64,
+   "pb": 16,
+   "sa": [
+    11,
+    9,
+    11,
+    11,
+    11
+   ],
+   "sb": [
+    9,
+    11,
+    9,
+    9,
+    9
+   ]
+  },
+  {
+   "id": 10845,
+   "data": "2026-11-17",
+   "a": 512,
+   "b": 469,
+   "wa": 4,
+   "wb": 1,
+   "pa": 72,
+   "pb": 18,
+   "sa": [
+    11,
+    12,
+    12,
+    9,
+    12
+   ],
+   "sb": [
+    7,
+    10,
+    10,
+    11,
+    10
+   ]
+  },
+  {
+   "id": 10846,
+   "data": "2026-11-17",
+   "a": 258,
+   "b": 306,
+   "wa": 2,
+   "wb": 3,
+   "pa": 40,
+   "pb": 60,
+   "sa": [
+    13,
+    11,
+    5,
+    7,
+    6
+   ],
+   "sb": [
+    11,
+    7,
+    11,
+    11,
+    11
+   ]
+  },
+  {
+   "id": 10847,
+   "data": "2026-11-17",
+   "a": 233,
+   "b": 511,
+   "wa": 4,
+   "wb": 1,
+   "pa": 80,
+   "pb": 20,
+   "sa": [
+    12,
+    6,
+    11,
+    11,
+    11
+   ],
+   "sb": [
+    10,
+    11,
+    3,
+    8,
+    4
+   ]
+  },
+  {
+   "id": 10848,
+   "data": "2026-11-17",
+   "a": 516,
+   "b": 449,
+   "wa": 3,
+   "wb": 2,
+   "pa": 42,
+   "pb": 28,
+   "sa": [
+    11,
+    11,
+    11,
+    11,
+    7
+   ],
+   "sb": [
+    7,
+    5,
+    13,
+    0,
+    11
+   ]
+  },
+  {
+   "id": 10849,
+   "data": "2026-11-18",
+   "a": 343,
+   "b": 473,
+   "wa": 1,
+   "wb": 4,
+   "pa": 18,
+   "pb": 72,
+   "sa": [
+    10,
+    8,
+    6,
+    6,
+    11
+   ],
+   "sb": [
+    12,
+    11,
+    11,
+    11,
+    9
+   ]
+  },
+  {
+   "id": 10850,
+   "data": "2026-11-18",
+   "a": 259,
+   "b": 225,
+   "wa": 3,
+   "wb": 2,
+   "pa": 54,
+   "pb": 36,
+   "sa": [
+    11,
+    11,
+    11,
+    2,
+    6
+   ],
+   "sb": [
+    9,
+    5,
+    8,
+    11,
+    11
+   ]
+  },
+  {
+   "id": 10851,
+   "data": "2026-11-18",
+   "a": 482,
+   "b": 449,
+   "wa": 0,
+   "wb": 5,
+   "pa": 5,
+   "pb": 80,
+   "sa": [
+    8,
+    3,
+    8,
+    7,
+    6
+   ],
+   "sb": [
+    11,
+    11,
+    11,
     11,
     11
    ]
