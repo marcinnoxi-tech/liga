@@ -1,6 +1,6 @@
 {
  "month": "2026-11",
- "updated": "2026-11-21T10:45:17.819Z",
+ "updated": "2026-11-21T17:52:29.757Z",
  "players": [
   {
    "id": 5093,
@@ -24,13 +24,6 @@
    "kontuzja": false
   },
   {
-   "id": 513,
-   "nazwisko": "Grzesikowski",
-   "imie": "Bartek",
-   "grupa": 90,
-   "kontuzja": false
-  },
-  {
    "id": 297,
    "nazwisko": "Fałek",
    "imie": "Wojciech",
@@ -38,24 +31,17 @@
    "kontuzja": false
   },
   {
+   "id": 513,
+   "nazwisko": "Grzesikowski",
+   "imie": "Bartek",
+   "grupa": 90,
+   "kontuzja": false
+  },
+  {
    "id": 289,
    "nazwisko": "Tórz",
    "imie": "Marcin",
    "grupa": 80,
-   "kontuzja": false
-  },
-  {
-   "id": 306,
-   "nazwisko": "Cegielski",
-   "imie": "Wojtek",
-   "grupa": 100,
-   "kontuzja": false
-  },
-  {
-   "id": 367,
-   "nazwisko": "Szparniak",
-   "imie": "Tomasz",
-   "grupa": 90,
    "kontuzja": false
   },
   {
@@ -73,24 +59,17 @@
    "kontuzja": false
   },
   {
-   "id": 447,
-   "nazwisko": "Zbytniewska",
-   "imie": "Anna",
-   "grupa": 60,
-   "kontuzja": false
-  },
-  {
-   "id": 482,
-   "nazwisko": "Duda",
-   "imie": "Mariusz",
-   "grupa": 70,
-   "kontuzja": false
-  },
-  {
-   "id": 269,
-   "nazwisko": "Mazurek",
-   "imie": "Sebastian",
+   "id": 306,
+   "nazwisko": "Cegielski",
+   "imie": "Wojtek",
    "grupa": 100,
+   "kontuzja": false
+  },
+  {
+   "id": 367,
+   "nazwisko": "Szparniak",
+   "imie": "Tomasz",
+   "grupa": 90,
    "kontuzja": false
   },
   {
@@ -108,10 +87,31 @@
    "kontuzja": false
   },
   {
-   "id": 514,
-   "nazwisko": "Szafraniec",
-   "imie": "Piotr",
-   "grupa": 80,
+   "id": 516,
+   "nazwisko": "Puk",
+   "imie": "Dariusz",
+   "grupa": 70,
+   "kontuzja": false
+  },
+  {
+   "id": 269,
+   "nazwisko": "Mazurek",
+   "imie": "Sebastian",
+   "grupa": 100,
+   "kontuzja": false
+  },
+  {
+   "id": 447,
+   "nazwisko": "Zbytniewska",
+   "imie": "Anna",
+   "grupa": 60,
+   "kontuzja": false
+  },
+  {
+   "id": 482,
+   "nazwisko": "Duda",
+   "imie": "Mariusz",
+   "grupa": 70,
    "kontuzja": false
   },
   {
@@ -122,17 +122,17 @@
    "kontuzja": false
   },
   {
-   "id": 516,
-   "nazwisko": "Puk",
-   "imie": "Dariusz",
-   "grupa": 70,
-   "kontuzja": false
-  },
-  {
    "id": 512,
    "nazwisko": "Herod",
    "imie": "Piotr",
    "grupa": 90,
+   "kontuzja": false
+  },
+  {
+   "id": 514,
+   "nazwisko": "Szafraniec",
+   "imie": "Piotr",
+   "grupa": 80,
    "kontuzja": false
   },
   {
@@ -150,13 +150,6 @@
    "kontuzja": false
   },
   {
-   "id": 225,
-   "nazwisko": "Gajda",
-   "imie": "Wojciech",
-   "grupa": 90,
-   "kontuzja": false
-  },
-  {
    "id": 370,
    "nazwisko": "Kaniowski",
    "imie": "Mariusz",
@@ -168,6 +161,13 @@
    "nazwisko": "Miarka",
    "imie": "Dominik",
    "grupa": 60,
+   "kontuzja": false
+  },
+  {
+   "id": 225,
+   "nazwisko": "Gajda",
+   "imie": "Wojciech",
+   "grupa": 90,
    "kontuzja": false
   },
   {
@@ -2870,6 +2870,54 @@
     5,
     7,
     14
+   ]
+  },
+  {
+   "id": 10868,
+   "data": "2026-11-21",
+   "a": 297,
+   "b": 474,
+   "wa": 5,
+   "wb": 0,
+   "pa": 90,
+   "pb": 5,
+   "sa": [
+    11,
+    11,
+    11,
+    11,
+    11
+   ],
+   "sb": [
+    6,
+    8,
+    7,
+    7,
+    5
+   ]
+  },
+  {
+   "id": 10869,
+   "data": "2026-11-21",
+   "a": 516,
+   "b": 482,
+   "wa": 5,
+   "wb": 0,
+   "pa": 80,
+   "pb": 5,
+   "sa": [
+    11,
+    11,
+    11,
+    11,
+    12
+   ],
+   "sb": [
+    4,
+    4,
+    2,
+    8,
+    10
    ]
   }
  ]
