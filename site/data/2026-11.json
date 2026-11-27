@@ -1,6 +1,6 @@
 {
  "month": "2026-11",
- "updated": "2026-11-27T00:00:17.570Z",
+ "updated": "2026-11-27T18:21:06.255Z",
  "players": [
   {
    "id": 233,
@@ -157,17 +157,17 @@
    "kontuzja": false
   },
   {
-   "id": 126,
-   "nazwisko": "Koch",
-   "imie": "Mateusz",
-   "grupa": 100,
-   "kontuzja": false
-  },
-  {
    "id": 225,
    "nazwisko": "Gajda",
    "imie": "Wojciech",
    "grupa": 90,
+   "kontuzja": false
+  },
+  {
+   "id": 126,
+   "nazwisko": "Koch",
+   "imie": "Mateusz",
+   "grupa": 100,
    "kontuzja": false
   },
   {
@@ -192,9 +192,9 @@
    "kontuzja": false
   },
   {
-   "id": 460,
-   "nazwisko": "Bekus",
-   "imie": "Radosław",
+   "id": 264,
+   "nazwisko": "Lau",
+   "imie": "Oskar",
    "grupa": 100,
    "kontuzja": false
   },
@@ -255,16 +255,9 @@
    "kontuzja": false
   },
   {
-   "id": 428,
-   "nazwisko": "Wojtaszewski",
-   "imie": "Rafał",
-   "grupa": 60,
-   "kontuzja": false
-  },
-  {
-   "id": 286,
-   "nazwisko": "Kęska",
-   "imie": "Grzegorz",
+   "id": 460,
+   "nazwisko": "Bekus",
+   "imie": "Radosław",
    "grupa": 100,
    "kontuzja": false
   },
@@ -280,6 +273,13 @@
    "nazwisko": "Spławski",
    "imie": "Tomasz",
    "grupa": 90,
+   "kontuzja": false
+  },
+  {
+   "id": 428,
+   "nazwisko": "Wojtaszewski",
+   "imie": "Rafał",
+   "grupa": 60,
    "kontuzja": false
   },
   {
@@ -304,9 +304,9 @@
    "kontuzja": false
   },
   {
-   "id": 264,
-   "nazwisko": "Lau",
-   "imie": "Oskar",
+   "id": 286,
+   "nazwisko": "Kęska",
+   "imie": "Grzegorz",
    "grupa": 100,
    "kontuzja": false
   },
@@ -3494,6 +3494,54 @@
     4,
     11,
     12
+   ]
+  },
+  {
+   "id": 10894,
+   "data": "2026-11-27",
+   "a": 511,
+   "b": 264,
+   "wa": 2,
+   "wb": 3,
+   "pa": 40,
+   "pb": 60,
+   "sa": [
+    11,
+    11,
+    8,
+    10,
+    9
+   ],
+   "sb": [
+    7,
+    4,
+    11,
+    12,
+    11
+   ]
+  },
+  {
+   "id": 10895,
+   "data": "2026-11-27",
+   "a": 126,
+   "b": 286,
+   "wa": 5,
+   "wb": 0,
+   "pa": 110,
+   "pb": 5,
+   "sa": [
+    13,
+    11,
+    11,
+    11,
+    11
+   ],
+   "sb": [
+    11,
+    8,
+    9,
+    7,
+    9
    ]
   }
  ]
